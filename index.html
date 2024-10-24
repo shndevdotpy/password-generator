@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="all">
+        <div class="container">
+            <div class="disable-selection title">Password Generator</div>
+            <div class="disable-selection description">Instantly create a secure, random password.</div>
+            <div class="generator-area">
+                <div class="options">
+                    <div class="disable-selection password-length">
+                        <div class="length-title">Length</div>
+                        <input type="range" min="1" max="50" value="16" class="slider" id="length-range">
+                        <div id="length-value" class="length-value">16</div>
+                    </div>
+                    <div class="disable-selection password-options">
+                        <input type="checkbox" id="uppercase" name="uppercase" value="Uppercase Letters">
+                        <label for="uppercase"> Uppercase Letters</label><br>
+                        <input type="checkbox" id="lowercase" name="lowercase" value="Uppercase Letters">
+                        <label for="lowercase"> Lowercase Letters</label><br>
+                        <input type="checkbox" id="numbers" name="numbers" value="Numbers">
+                        <label for="numbers"> Numbers</label><br>
+                        <input type="checkbox" id="symbols" name="symbols" value="Symbols">
+                        <label for="symbols"> Symbols</label><br>
+                    </div>
+                </div>
+                <div class="generated-password">
+                    <div class="disable-selection title">Generated Password</div>
+                    <input value="Waiting for generation..." readonly type="text" name="Generated Password" class="generated" id="generated-password">
+                </div>
+                <div onclick="generate()" class="disable-selection generate-button">Generate</div>
+                <div onclick="copy()" id="copy-button" class="copy-button">Copy</div>
+                <div class="credit">Made with ❤️ by <a target="_blank" href="https://github.com/shndevdotpy">shndev</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
